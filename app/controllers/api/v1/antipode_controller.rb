@@ -1,5 +1,6 @@
 class Api::V1::AntipodeController < ApplicationController
   def show
-      facade = AntipodeForecastFacade.new(params[:location])
+    results = AntipodeForecastFacade.new(params[:location]).get_forecast
+    binding.pry
   end
 end

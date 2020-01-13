@@ -6,7 +6,7 @@ RSpec.describe "when going to '/antipode' endpoint" do
     get "/api/v1/antipode?location=hong kong"
 
     expect(response).to be_successful
-    
+
     antipode_results = JSON.parse(response.body, symbolize_names: true)
 
     expect(response[:data]).to_not be_empty
