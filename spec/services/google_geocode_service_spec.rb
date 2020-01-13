@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe GoogleGeocodeService do
   it "can get coordinates for given location" do
-    location_info = subject.get_forecast("Denver, CO")
+    location_info = subject.get_location("Denver, CO")
 
     expect(location_info.address).to eq("Denver, CO, USA")
     expect(location_info.address).to eq("Denver, CO, USA")
