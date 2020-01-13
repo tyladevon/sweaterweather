@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-01-13T11:15:09-07:00">2020-01-13T11:15:09-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-01-13T11:20:16-07:00">2020-01-13T11:20:16-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">100.0%</span></span>
+    (<span class="covered_percent"><span class="green">99.13%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.01
+         1.0
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>21</b> files in total.
-    <b>90</b> relevant lines. 
-    <span class="green"><b>90</b> lines covered</span> and
-    <span class="red"><b>0</b> lines missed </span>
+    <b>26</b> files in total.
+    <b>115</b> relevant lines. 
+    <span class="green"><b>114</b> lines covered</span> and
+    <span class="red"><b>1</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -61,6 +61,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#f98c99362994eb0296a5e5605c0917e7c85d8307" class="src_link" title="app/controllers/api/v1/forecast_controller.rb">app/controllers/api/v1/forecast_controller.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>9</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#527de9cf38ec06cdeaae7e3a5ca830d1fc46e8ec" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>2</td>
@@ -72,12 +82,12 @@
       
       <tr>
         <td class="strong"><a href="#5cf8d256c63cba2bfed0f7d57715687a05131f63" class="src_link" title="app/facades/antipode_forecast_facade.rb">app/facades/antipode_forecast_facade.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>13</td>
-        <td>8</td>
-        <td>8</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td class="yellow strong">85.71 %</td>
+        <td>15</td>
+        <td>7</td>
+        <td>6</td>
+        <td>1</td>
+        <td>0.9</td>
       </tr>
       
       <tr>
@@ -260,6 +270,46 @@
         <td>1.0</td>
       </tr>
       
+      <tr>
+        <td class="strong"><a href="#e8601002d376c215385248d0fd099be775d1d39e" class="src_link" title="spec/requests/api/v1/get_forecast_spec.rb">spec/requests/api/v1/get_forecast_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>10</td>
+        <td>5</td>
+        <td>5</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#7a23a95f78ac418d95aad73c4d952e40706ac61a" class="src_link" title="spec/services/amypode_spec.rb">spec/services/amypode_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>11</td>
+        <td>6</td>
+        <td>6</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#74510a1ca675584ffd951c7105330d42001131d8" class="src_link" title="spec/services/darksky_service_spec.rb">spec/services/darksky_service_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>9</td>
+        <td>5</td>
+        <td>5</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#25f901aa73ad2919c807ed8ed36397d3d8e27d6a" class="src_link" title="spec/services/google_geocode_service_spec.rb">spec/services/google_geocode_service_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>13</td>
+        <td>8</td>
+        <td>8</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
     </tbody>
   </table>
 </div>
@@ -305,7 +355,7 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">    results = AntipodeForecastFacade.new(params[:location]).get_forecast</code>
+          <code class="ruby">    AntipodeForecastFacade.new(params[:location]).get_forecast</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
@@ -315,6 +365,79 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="f98c99362994eb0296a5e5605c0917e7c85d8307">
+  <div class="header">
+    <h3>app/controllers/api/v1/forecast_controller.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>2</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Api::V1::ForecastController &lt; ApplicationController</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def show</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby">    # render :locals {facade = Facade.new}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">    # get_local = GoogleGeocodeService.new.get_location(location)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">    # serialized_forecast = LocationSerializer.new(get_local)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">    # render json: serialized_forecast</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby">end</code>
@@ -359,11 +482,11 @@
         <div class="source_table" id="5cf8d256c63cba2bfed0f7d57715687a05131f63">
   <div class="header">
     <h3>app/facades/antipode_forecast_facade.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="yellow">85.71 %</span> covered</h4>
     <div>
-      <b>8</b> relevant lines. 
-      <span class="green"><b>8</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>7</b> relevant lines. 
+      <span class="green"><b>6</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -421,28 +544,40 @@
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">    results = GoogleGeocodeService.new.get_location(location)</code>
+          <code class="ruby">    results = AntipodeForecast.new</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="10">
           
-          <code class="ruby">    anti_results = AmypodeService.new.find_antipode(results.lat,results.long)</code>
+          
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="11">
           
-          <code class="ruby">    forecast_results = DarkskyService.new.get_forecast(ENV[&#39;darksky_api_key&#39;],anti_results.lat, anti_results.long)</code>
+          
+          <code class="ruby">    # results = GoogleGeocodeService.new.get_location(location)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
           
           
+          <code class="ruby">    # anti_results = AmypodeService.new.find_antipode(results.lat,results.long)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="13">
+          
+          
+          <code class="ruby">    forecast_results = DarkskyService.new.get_forecast(ENV[&#39;darksky_api_key&#39;],anti_results.lat, anti_results.long)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">end</code>
@@ -2159,6 +2294,340 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="e8601002d376c215385248d0fd099be775d1d39e">
+  <div class="header">
+    <h3>spec/requests/api/v1/get_forecast_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>5</b> relevant lines. 
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.describe &quot;when going to &#39;/api/v1/forecast?location=Denver,CO&#39;&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &quot;I can see current weather for that location&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    get &quot;/api/v1/forecast?location=Denver,CO&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(response).to be_successful</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="7a23a95f78ac418d95aad73c4d952e40706ac61a">
+  <div class="header">
+    <h3>spec/services/amypode_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>6</b> relevant lines. 
+      <span class="green"><b>6</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.describe AmypodeService do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &quot;can get antipode lat/long for given origin&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    antipode = subject.find_antipode(22.278, 114.175)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(antipode.lat).to eq(-22.278)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(antipode.long).to eq(-65.825)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="74510a1ca675584ffd951c7105330d42001131d8">
+  <div class="header">
+    <h3>spec/services/darksky_service_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>5</b> relevant lines. 
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.describe DarkskyService do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &quot;can get forecast for location&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    forecast = subject.get_forecast(ENV[&#39;darksky_api_key&#39;],39.7392,-104.9902)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(forecast.current_weather).to_not be_empty</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="25f901aa73ad2919c807ed8ed36397d3d8e27d6a">
+  <div class="header">
+    <h3>spec/services/google_geocode_service_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.describe GoogleGeocodeService do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &quot;can get coordinates for given location&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    location_info = subject.get_location(&quot;Denver, CO&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(location_info.address).to eq(&quot;Denver, CO, USA&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(location_info.address).to eq(&quot;Denver, CO, USA&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(location_info.lat).to eq(39.7392358)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(location_info.long).to eq(-104.990251)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">end</code>
