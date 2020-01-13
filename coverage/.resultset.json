@@ -174,7 +174,7 @@
         null,
         null,
         1,
-        1,
+        2,
         null,
         null,
         null,
@@ -186,6 +186,22 @@
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/tyladevon/turing/mod_3/final/sweater_weather_api/spec/services/darksky_service_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
         null
       ],
       "/Users/tyladevon/turing/mod_3/final/sweater_weather_api/app/services/darksky_service.rb": [
@@ -194,7 +210,60 @@
         1,
         null,
         1,
+        1,
         null,
+        null
+      ],
+      "/Users/tyladevon/turing/mod_3/final/sweater_weather_api/spec/services/google_geocode_service_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/tyladevon/turing/mod_3/final/sweater_weather_api/app/services/google_geocode_service.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
+        2,
+        2,
+        null,
+        null
+      ],
+      "/Users/tyladevon/turing/mod_3/final/sweater_weather_api/app/controllers/api/v1/forecast_controller.rb": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/tyladevon/turing/mod_3/final/sweater_weather_api/app/controllers/application_controller.rb": [
+        1,
+        null
+      ],
+      "/Users/tyladevon/turing/mod_3/final/sweater_weather_api/app/models/location.rb": [
+        1,
+        1,
+        1,
+        null,
+        2,
+        1,
         1,
         null,
         null
@@ -213,6 +282,6 @@
         null
       ]
     },
-    "timestamp": 1578892974
+    "timestamp": 1578895408
   }
 }
