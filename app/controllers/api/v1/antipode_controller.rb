@@ -1,5 +1,6 @@
 class Api::V1::AntipodeController < ApplicationController
   def show
-    AntipodeForecastFacade.new(params[:location]).get_forecast
+    weather = AntipodeForecastFacade.new(params[:location]).get_forecast
+    serialized_weather = WeatherSerializer.new(weather)
   end
 end

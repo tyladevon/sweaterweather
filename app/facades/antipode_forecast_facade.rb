@@ -6,10 +6,6 @@ class AntipodeForecastFacade
   end
 
   def get_forecast
-    results = AntipodeForecast.new(location)
-
-    # results = GoogleGeocodeService.new.get_location(location)
-    # anti_results = AmypodeService.new.find_antipode(results.lat,results.long)
-    forecast_results = DarkskyService.new.get_forecast(ENV['darksky_api_key'],anti_results.lat, anti_results.long)
+    results = AntipodeForecast.new(@location).get_antipode_forecast
   end
 end
