@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       get '/forecast', to: "forecast#show"
       get '/antipode', to: "antipode#show"
+      get '/gif', to: "gif#show"
     end
   end
 end
