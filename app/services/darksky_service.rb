@@ -3,6 +3,5 @@ class DarkskyService
     response = Faraday.get("https://api.darksky.net/forecast/#{key}/#{lat},#{lng}") do |req|
     end
     raw_data = JSON.parse(response.body, symbolize_names: true)
-    Forecast.new(raw_data)
   end
 end
