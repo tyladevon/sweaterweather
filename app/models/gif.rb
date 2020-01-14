@@ -6,13 +6,12 @@ class Gif
   end
 
   def get_response
-    response = @forecast_data[:hourly][:data].each do |forecast|
-      # binding.pry
-      forecast[:time]
-      forecast[:summary]
-      @url
+    response = Hash.new
+    @forecast_data[:hourly][:data].each do |forecast|
+      response = { "time" => forecast[:time],
+      "summary" => forecast[:summary],
+      "url" => @url}
     end
-    binding.pry
     response
   end
 
