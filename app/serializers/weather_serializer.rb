@@ -1,5 +1,8 @@
 class WeatherSerializer
     include FastJsonapi::ObjectSerializer
 
-    attributes :location_name, :summary, :current_temperature, :search_location
+    attributes :location_name,
+               :summary,
+               :current_temperature,
+               :search_location
 end
