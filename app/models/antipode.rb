@@ -1,5 +1,6 @@
 class Antipode
-  attr_reader :lat, :long
+  attr_reader :lat,
+              :long
 
   def initialize(data)
     @lat = data[:data][:attributes][:lat]

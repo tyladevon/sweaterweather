@@ -7,6 +7,5 @@ class GoogleGeocodeService
     end
 
     raw_data = JSON.parse(response.body, symbolize_names: true)
-    Location.new(raw_data)
   end
 end

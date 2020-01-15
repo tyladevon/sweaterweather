@@ -1,5 +1,9 @@
 class Weather
-  attr_reader :id, :location_name, :search_location, :current_temperature, :summary
+  attr_reader :id,
+              :location_name,
+              :search_location,
+              :current_temperature,
+              :summary
 
   def initialize(location, results, forecast_results)
     @id = nil
