@@ -1,15 +1,12 @@
 class Forecast
-  attr_reader :id,
-              :current_weather,
-              :current_weather_icon,
-              :current_temperature,
-              :location
+  attr_reader :id
 
-  def initialize(forecast_data, location)
+
+  def initialize(location, current_weather, summary, forecast)
     @id = nil
-    @current_weather = forecast_data[:currently][:summary]
-    @current_weather_icon = forecast_data[:currently][:icon]
-    @current_temperature = forecast_data[:currently][:temperature]
     @location = location
+    @current_weather = current_weather
+    @summary = summary
+    @forecast = forecast
   end
 end
